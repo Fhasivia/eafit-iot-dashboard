@@ -1,11 +1,14 @@
 # Publicar el dashboard
 
+El dashboard ya está publicado en https://eafit-iot-fhasivia.streamlit.app/. Este documento conserva la configuración utilizada y las comprobaciones para futuras actualizaciones.
+
 Configuración prevista del repositorio y la aplicación:
 
 | Campo | Valor |
 | --- | --- |
 | Cuenta propietaria | `Fhasivia` |
 | Repositorio | `Fhasivia/eafit-iot-dashboard` |
+| Aplicación publicada | https://eafit-iot-fhasivia.streamlit.app/ |
 | Rama | `main` |
 | Archivo principal | `app.py` |
 | Versión de Python | `3.12` |
@@ -23,7 +26,7 @@ Si se suben los archivos mediante la web de GitHub, comprobar que `.streamlit/co
 ## Streamlit Community Cloud
 
 1. Iniciar sesión en https://share.streamlit.io con la cuenta que tenga acceso al repositorio.
-2. Elegir **Create app** y **Yup, I have an app**.
+2. Elegir **Create app** y **Deploy from repo**.
 3. Seleccionar el repositorio, la rama `main` y el archivo `app.py`.
 4. En **Advanced settings**, elegir **Python 3.12**. El campo de secretos se deja vacío.
 5. Elegir un subdominio disponible o conservar el que asigne Streamlit.
@@ -48,7 +51,7 @@ Después de publicar, abrir el enlace en una ventana sin sesión para verificar 
 
 ## Validación local
 
-Comprobación realizada el 5 de noviembre de 2026 en un entorno nuevo de macOS con Python 3.12.14 y las versiones de `requirements.txt`: diez pruebas aprobadas y ninguna dependencia incompatible detectada por `pip check`. Se verificaron los 28 archivos preparados, la inclusión del logo y de `.streamlit/config.toml`, y la huella original del CSV. Esto corresponde a validación local; el despliegue remoto todavía no se ha realizado.
+Comprobación realizada el 5 de noviembre de 2026 en un entorno nuevo de macOS con Python 3.12.14 y las versiones de `requirements.txt`: diez pruebas aprobadas y ninguna dependencia incompatible detectada por `pip check`. Se verificaron los 28 archivos iniciales, la inclusión del logo y de `.streamlit/config.toml`, y la huella original del CSV. Después se desplegó la aplicación y se comprobaron sus indicadores, filtros, navegación y descarga. Los resultados están en `analisis/verificacion-publicacion.md`.
 
 Desde la raíz del repositorio, con las dependencias instaladas:
 

@@ -1,5 +1,7 @@
 # Tótem IoT: proyecto integrador EAFIT
 
+**Aplicación publicada:** [abrir dashboard](https://eafit-iot-fhasivia.streamlit.app/).
+
 Dashboard en Python, Streamlit, Pandas y Plotly para explorar las mediciones simuladas del sensor MAX30102. Incluye filtros por fecha, estudiante y estado, seguimiento individual, nueve gráficos y exportación CSV. Los registros se agrupan por fecha y hora de Bogotá.
 
 El CSV original está incluido y no se modifica al filtrar o analizar. Los datos son simulados y la aplicación no tiene uso diagnóstico.
@@ -68,7 +70,7 @@ Los cinco KPI implementados son mediciones, estudiantes únicos, porcentaje vál
 
 ## Publicación
 
-Repositorio: [Fhasivia/eafit-iot-dashboard](https://github.com/Fhasivia/eafit-iot-dashboard), rama `main`. La aplicación está preparada para Streamlit Community Cloud; el despliegue del enlace público está pendiente. Los pasos y casos de validación están en [PUBLICAR.md](PUBLICAR.md).
+Repositorio: [Fhasivia/eafit-iot-dashboard](https://github.com/Fhasivia/eafit-iot-dashboard), rama `main`. Aplicación desplegada en [Streamlit Community Cloud](https://eafit-iot-fhasivia.streamlit.app/), con Python 3.12 configurado. Los pasos de mantenimiento están en [PUBLICAR.md](PUBLICAR.md) y los resultados de las pruebas del enlace publicado en [verificación de publicación](analisis/verificacion-publicacion.md).
 
 1. Usar este repositorio y conservar el CSV y `.streamlit/config.toml`. No subir `.venv` ni credenciales.
 2. En Streamlit Community Cloud, conectar la cuenta de GitHub y elegir el repositorio, la rama y `app.py` como archivo principal.
@@ -79,7 +81,7 @@ Si se sube la carpeta `eafit-iot` dentro de otro repositorio, el archivo princip
 
 Referencia: [despliegue en Streamlit Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy), [dependencias](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies) y [conversión de zona horaria en Pandas](https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.tz_convert.html).
 
-Quedan para la entrega final: contrastar la rúbrica completa, completar los datos del equipo, publicar en Streamlit Cloud, y preparar y grabar el video de 5 a 8 minutos.
+Quedan para la entrega final: contrastar la rúbrica completa, completar los datos del equipo y preparar y grabar el video de 5 a 8 minutos.
 
 ## Decisiones de interfaz
 

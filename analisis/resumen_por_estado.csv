@@ -1,0 +1,5 @@
+,heart_rate_bpm,heart_rate_bpm,heart_rate_bpm,heart_rate_bpm,spo2_percent,spo2_percent,spo2_percent,spo2_percent,signal_quality,signal_quality,signal_quality,signal_quality
+,count,mean,min,max,count,mean,min,max,count,mean,min,max
+measurement_status,,,,,,,,,,,,
+invalid,77,75.31168831168831,42,128,77,97.61168831168831,91.4,99.7,77,0.8677402597402598,0.754,0.998
+valid,2590,75.47142857142858,40,133,2590,97.71679536679537,89.6,100.0,2590,0.8747339768339769,0.75,1.0

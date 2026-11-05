@@ -1,0 +1,187 @@
+:root {
+  --iot-bg: #070e20;
+  --iot-panel: #141f34;
+  --iot-text: #f0f3fa;
+  --iot-muted: #b2bdd1;
+  --iot-line: rgba(187, 204, 234, 0.19);
+  --iot-mint: #87e5b4;
+  --iot-violet: #ba9af7;
+}
+
+.stApp {
+  background: radial-gradient(ellipse at 9% 0%, #172940 0, transparent 48%),
+              radial-gradient(ellipse at 96% 76%, #0d2330 0, transparent 30%), var(--iot-bg);
+  color: var(--iot-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+header[data-testid="stHeader"] { display: none; }
+.stMainBlockContainer { width: 100%; max-width: 1370px; margin-inline: auto; box-sizing: border-box; padding: 2.5rem 2.5rem 3rem; }
+[data-testid="stVerticalBlock"] { gap: 1rem; }
+[data-testid="stCaptionContainer"] { color: var(--iot-muted); opacity: 1; }
+[data-testid="stCaptionContainer"] p { font-size: 0.78rem; line-height: 1.55; }
+h2, h3, h4 { color: var(--iot-text); letter-spacing: -0.02em; }
+h3 { font-size: 1.15rem !important; font-weight: 500 !important; padding: 0 0 0.2rem !important; }
+h4 { font-size: 1rem !important; }
+button, input { font-family: inherit; }
+button:focus-visible, input:focus-visible, [role="tab"]:focus-visible {
+  outline: 2px solid var(--iot-mint) !important;
+  outline-offset: 3px;
+}
+
+.st-key-topbar {
+  padding: 18px 24px;
+  border: 1px solid var(--iot-line);
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(220,231,255,0.11), rgba(16,23,42,0.72) 60%);
+  box-shadow: inset 0 1px 0 rgba(235,243,255,0.14);
+  backdrop-filter: blur(18px);
+}
+.brandbar { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 28px; min-height: 50px; }
+.st-key-topbar [data-testid="stMarkdownContainer"],
+.st-key-feed [data-testid="stMarkdownContainer"],
+.st-key-observations [data-testid="stMarkdownContainer"] { margin-bottom: 0; }
+.brand-identity { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand-copy { display: flex; flex-direction: column; justify-content: center; gap: 5px; min-width: 0; }
+.brand-symbol {
+  width: 44px; height: 44px; padding: 8px; box-sizing: border-box; border-radius: 11px; flex-shrink: 0;
+  background: linear-gradient(140deg, rgba(186,154,247,0.18), rgba(135,229,180,0.1));
+  color: var(--iot-mint); border: 1px solid var(--iot-line);
+}
+.brand-symbol svg { display: block; width: 100%; height: 100%; }
+.stApp .brandbar .brand-copy h1 { font-size: 22px; font-weight: 600; line-height: 1.15; padding: 0; margin: 0; letter-spacing: -0.025em; }
+.stApp .brandbar .brand-copy p { color: var(--iot-muted); font-size: 12px; line-height: 1.35; padding: 0; margin: 0; }
+.header-context { display: flex; align-items: center; gap: 24px; }
+.header-source { padding-right: 24px; border-right: 1px solid var(--iot-line); }
+.header-source span, .header-source strong { display: block; font-size: 12px; }
+.header-source span { color: var(--iot-muted); margin-bottom: 3px; }
+.header-source strong { font-weight: 500; }
+.dataset-label { font-size: 12px; color: var(--iot-muted); display: flex; align-items: center; gap: 8px; }
+.dataset-label i { width: 7px; height: 7px; border-radius: 50%; background: var(--iot-mint); }
+.eafit-brand { display: flex; align-items: center; justify-content: center; padding-left: 26px; border-left: 1px solid var(--iot-line); }
+.eafit-brand img { display: block; width: 134px; height: 50px; object-fit: contain; margin: 0; }
+
+.st-key-filters {
+  padding: 12px 17px 8px; border: 1px solid var(--iot-line); border-radius: 14px;
+  background: rgba(17,27,47,0.76);
+}
+.st-key-filters [data-testid="stWidgetLabel"] p { font-size: 12px; color: var(--iot-muted); }
+.st-key-filters [data-baseweb="select"] > div,
+.st-key-filters [data-baseweb="input"] {
+  border: 1px solid rgba(187,204,234,0.14); border-radius: 10px; min-height: 44px;
+  background: rgba(5,13,29,0.45);
+}
+.st-key-filters [data-baseweb="tag"] { background: rgba(186,154,247,0.2); color: var(--iot-text); }
+.st-key-selection_note { margin-top: -6px; }
+
+.st-key-stat_total, .st-key-stat_students, .st-key-stat_bpm, .st-key-stat_spo2,
+.st-key-feed, .st-key-activity, .st-key-observations, .st-key-registry,
+.st-key-distributions [data-testid="stColumn"],
+.st-key-distributions_more [data-testid="stColumn"],
+.st-key-quality_status, .st-key-quality_signal {
+  border: 1px solid var(--iot-line);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(230,238,255,0.085), rgba(20,29,48,0.80) 54%);
+  box-shadow: inset 0 1px 0 rgba(235,243,255,0.09);
+}
+.st-key-stat_total, .st-key-stat_students { padding: 10px 15px; }
+.st-key-stat_bpm, .st-key-stat_spo2 { padding: 10px 12px; }
+.st-key-kpi_stack [data-testid="stVerticalBlock"] { gap: 10px; }
+[data-testid="stMetricLabel"] p { color: var(--iot-muted); font-size: 13px; }
+[data-testid="stMetricValue"] { font-size: 27px; line-height: 1.2; font-weight: 450; letter-spacing: -0.035em; }
+.st-key-stat_bpm [data-testid="stMetricValue"], .st-key-stat_spo2 [data-testid="stMetricValue"] { font-size: 23px; }
+.st-key-stat_bpm [data-testid="stMetricLabel"] p, .st-key-stat_spo2 [data-testid="stMetricLabel"] p { font-size: 12px; }
+
+.st-key-station {
+  min-height: 285px; padding: 22px 25px 18px; border-radius: 17px;
+  border: 1px solid transparent;
+  background: linear-gradient(130deg, #273d5c 0%, #10243c 42%, #0c182f 74%) padding-box,
+              linear-gradient(125deg, #8b91ee, #81d8c6 52%, #9c77de 92%) border-box;
+  box-shadow: -7px 5px 26px rgba(149,110,236,0.22), 8px -2px 26px rgba(112,222,177,0.18);
+  position: relative; overflow: hidden;
+}
+.st-key-station::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(123deg, rgba(244,248,255,0.08) 0%, rgba(244,248,255,0.04) 46%, transparent 46.2%);
+}
+.station-heading { display: flex; justify-content: space-between; align-items: center; color: #c5d1e4; font-size: 12px; }
+.station-heading span:last-child { color: var(--iot-mint); font-size: 11px; }
+.sensor-icon { width: 43px; height: 34px; margin-top: 13px; color: #c4d1e4; }
+.sensor-icon svg { width: 100%; height: 100%; }
+.st-key-station [data-testid="stMetricValue"] { font-size: 44px; color: var(--iot-text); font-weight: 400; }
+.st-key-station [data-testid="stMetricLabel"] p { color: #c6d3e7; font-size: 13px; }
+.st-key-station [data-testid="stProgress"] > div > div > div > div { background: var(--iot-mint); }
+.stApp .station-foot { font-size: 11px; color: #c5d1e4; margin: -5px 0 0; }
+
+.st-key-feed, .st-key-observations { padding: 0; overflow: hidden; }
+.feed-title { font-size: 16px; font-weight: 500; padding: 15px 17px; border-bottom: 1px solid var(--iot-line); }
+.feed-row { display: flex; align-items: center; gap: 11px; padding: 12px 17px; border-bottom: 1px solid rgba(187,204,234,0.09); }
+.feed-row:first-of-type { background: rgba(178,204,225,0.04); }
+.feed-symbol { width: 28px; height: 28px; border: 1px solid rgba(187,204,234,0.2); border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; }
+.feed-symbol.valid { color: var(--iot-mint); background: rgba(135,229,180,0.09); }
+.feed-symbol.invalid { color: var(--iot-violet); background: rgba(186,154,247,0.1); }
+.feed-row strong { display: block; font-size: 13px; font-weight: 500; }
+.feed-row div > span { display: block; color: var(--iot-muted); font-size: 11px; margin-top: 3px; }
+.stApp .feed-foot { margin: 0; padding: 11px 17px; color: var(--iot-muted); font-size: 11px; }
+.finding { padding: 12px 17px; border-bottom: 1px solid rgba(187,204,234,0.1); }
+.finding:last-child { border-bottom: 0; }
+.finding > span { color: var(--iot-muted); font-size: 11px; }
+.finding strong { display: block; font-size: 18px; font-weight: 450; margin: 4px 0; }
+.finding small { color: var(--iot-muted); font-size: 12px; font-weight: 400; }
+.stApp .finding p { color: var(--iot-muted); font-size: 11px; margin: 0; line-height: 1.5; }
+
+[data-baseweb="tab-list"] { gap: 24px; background: transparent; border-bottom: 1px solid var(--iot-line); }
+[data-baseweb="tab"] { font-size: 13px; min-height: 44px; background: transparent; color: var(--iot-muted); padding-inline: 0; }
+[data-baseweb="tab"][aria-selected="true"] { color: var(--iot-mint); }
+[data-baseweb="tab-highlight"] { background: var(--iot-mint); }
+.st-key-activity { padding: 18px 20px 8px; }
+.st-key-registry { padding: 16px 20px; }
+.st-key-distributions [data-testid="stColumn"], .st-key-distributions_more [data-testid="stColumn"] { padding: 17px 20px; }
+.st-key-quality_status, .st-key-quality_signal { padding: 18px 20px; }
+.st-key-registry [data-testid="stDataFrame"] { border-radius: 8px; overflow: hidden; }
+[data-testid="stDownloadButton"] button {
+  background: rgba(186,154,247,0.09); border: 1px solid rgba(186,154,247,0.45);
+  border-radius: 9px; min-height: 44px; color: var(--iot-text);
+}
+[data-testid="stDownloadButton"] button:hover { background: rgba(186,154,247,0.18); border-color: var(--iot-violet); }
+.registry-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.registry-heading h3 { margin: 0; }
+.registry-heading span { color: var(--iot-muted); font-size: 11px; }
+.stApp .method-note { color: var(--iot-muted); font-size: 11px; line-height: 1.55; margin: 0; }
+.bottom-note { border-top: 1px solid var(--iot-line); padding-top: 14px; margin-top: 8px; }
+
+@media (max-width: 1000px) and (min-width: 641px) {
+  .stMainBlockContainer { padding-inline: 1.3rem; }
+  .st-key-stat_bpm [data-testid="stMetricValue"], .st-key-stat_spo2 [data-testid="stMetricValue"] { font-size: 18px; }
+  .st-key-station { padding-inline: 18px; }
+  .feed-row, .finding { padding-inline: 12px; }
+  .brandbar { gap: 18px; }
+  .header-context { gap: 14px; }
+  .header-source { padding-right: 14px; }
+  .eafit-brand { padding-left: 18px; }
+  .eafit-brand img { width: 112px; height: auto; }
+}
+@media (max-width: 820px) and (min-width: 641px) {
+  .brandbar { grid-template-columns: minmax(0, 1fr) auto; }
+  .header-context { display: none; }
+}
+@media (max-width: 640px) {
+  .stMainBlockContainer { padding: 1.2rem 1rem 2rem; }
+  .st-key-topbar { padding: 15px 14px; }
+  .brandbar { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; min-height: 44px; }
+  .brand-identity { gap: 9px; }
+  .brand-symbol { width: 34px; height: 34px; padding: 6px; }
+  .stApp .brandbar .brand-copy h1 { font-size: 18px; }
+  .stApp .brandbar .brand-copy p { font-size: 10px; }
+  .header-context { display: none; }
+  .eafit-brand { padding-left: 12px; }
+  .eafit-brand img { width: 88px; height: auto; }
+  .st-key-filters { padding: 13px; }
+  .st-key-kpi_stack [data-testid="stHorizontalBlock"] { flex-direction: row; flex-wrap: nowrap; }
+  .st-key-kpi_stack [data-testid="stColumn"] { min-width: 0; width: 50%; flex: 1 1 0; }
+  .st-key-stat_bpm [data-testid="stMetricValue"], .st-key-stat_spo2 [data-testid="stMetricValue"] { font-size: 25px; }
+  .st-key-station { min-height: 248px; padding: 20px; }
+  .st-key-activity, .st-key-registry { padding: 16px 12px; }
+  .registry-heading span { max-width: 90px; text-align: right; }
+  [data-baseweb="tab-list"] { gap: 20px; }
+  [data-baseweb="tab"] { white-space: nowrap; font-size: 12px; }
+}

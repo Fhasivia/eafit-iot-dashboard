@@ -1,0 +1,89 @@
+{
+  "archivo": "proyecto_integrador_eafit_max30102.csv",
+  "sha256": "dd918095c6174247956749db976400941c2560ca98ccb5b4ca66fb001bde19ea",
+  "filas": 2667,
+  "columnas": 8,
+  "tipos_originales": {
+    "timestamp": "object",
+    "student_id": "object",
+    "nfc_id": "object",
+    "device_id": "object",
+    "heart_rate_bpm": "int64",
+    "spo2_percent": "float64",
+    "signal_quality": "float64",
+    "measurement_status": "object"
+  },
+  "nulos": {
+    "timestamp": 0,
+    "student_id": 0,
+    "nfc_id": 0,
+    "device_id": 0,
+    "heart_rate_bpm": 0,
+    "spo2_percent": 0,
+    "signal_quality": 0,
+    "measurement_status": 0
+  },
+  "duplicados_exactos": 0,
+  "estados": {
+    "valid": 2590,
+    "invalid": 77
+  },
+  "kpi": {
+    "mediciones": 2667,
+    "estudiantes": 295,
+    "validas": 2590,
+    "porcentaje_valido": 97.11286089238845,
+    "bpm_promedio": 75.47142857142858,
+    "spo2_promedio": 97.71679536679537
+  },
+  "rango_utc": [
+    "2026-09-30 00:50:00+00:00",
+    "2026-10-29 00:35:00+00:00"
+  ],
+  "rango_bogota": [
+    "2026-09-29 19:50:00-05:00",
+    "2026-10-28 19:35:00-05:00"
+  ],
+  "cambios_fecha_por_zona": 385,
+  "fechas_observadas": 30,
+  "dispositivos": 1,
+  "nfc_distintos": 295,
+  "nfc_con_varios_estudiantes": 0,
+  "estudiantes_con_varios_nfc": 0,
+  "instantes_compartidos": 11,
+  "filas_en_instantes_compartidos": 22,
+  "duplicados_estudiante_instante": 0,
+  "estados_desconocidos": 0,
+  "bpm_no_positivo": 0,
+  "spo2_fuera_0_100": 0,
+  "senal_fuera_0_1": 0,
+  "atipicos_iqr_solo_validas": {
+    "heart_rate_bpm": {
+      "limite_inferior": 41.5,
+      "limite_superior": 109.5,
+      "n": 32
+    },
+    "spo2_percent": {
+      "limite_inferior": 95.14999999999998,
+      "limite_superior": 100.35000000000002,
+      "n": 44
+    },
+    "signal_quality": {
+      "limite_inferior": 0.6260000000000001,
+      "limite_superior": 1.122,
+      "n": 0
+    }
+  },
+  "calendario_interior": {
+    "entre_semana": {
+      "count": 20.0,
+      "sum": 2423.0,
+      "mean": 121.15
+    },
+    "fin_semana": {
+      "count": 8.0,
+      "sum": 132.0,
+      "mean": 16.5
+    }
+  }
+}
